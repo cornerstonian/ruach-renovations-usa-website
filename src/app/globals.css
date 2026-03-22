@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+}
+
+html { scroll-behavior: smooth; }
+body { background-color: #fafaf9; color: #1c1917; font-family: var(--font-body); }
+
+input, textarea {
+  outline: none;
+}
+
+/* Preview watermark — remove on final delivery */
+.preview-watermark {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(-30deg);
+  font-size: 5rem;
+  font-weight: 900;
+  color: rgba(0,0,0,0.04);
+  pointer-events: none;
+  z-index: 9999;
+  white-space: nowrap;
+  user-select: none;
+  letter-spacing: 0.1em;
+}
