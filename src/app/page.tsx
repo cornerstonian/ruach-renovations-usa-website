@@ -95,7 +95,7 @@ function Nav() {
 function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden"
-      style={{ background: 'linear-gradient(135deg, #1c1917 0%, #292524 40%, #1c1917 100%)' }}>
+      style={{ background: 'linear-gradient(135deg, #1c1917 0%, #292524 50%, #1c1917 100%)' }}>
       {/* Warm radial glow */}
       <div className="absolute inset-0 pointer-events-none" style={{ background: 'radial-gradient(ellipse at 60% 50%, rgba(217,119,6,0.12) 0%, transparent 70%)' }} />
       {/* Subtle grid */}
@@ -106,7 +106,7 @@ function Hero() {
           <motion.div variants={fadeUp}>
             <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.3em] uppercase mb-8 px-4 py-2 rounded-full border"
               style={{ color: '#d97706', borderColor: 'rgba(217,119,6,0.3)', backgroundColor: 'rgba(217,119,6,0.08)' }}>
-              Premium Home Renovation · Est. USA
+              Premium Home Renovation
             </span>
           </motion.div>
           <motion.h1 variants={fadeUp} className="font-display text-5xl md:text-7xl lg:text-8xl font-bold leading-[1.05] mb-8" style={{ color: '#fafaf9' }}>
@@ -150,10 +150,7 @@ function Services() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {SERVICES.map((s, i) => (
               <motion.div key={s.title} variants={fadeUp}
-                className="group bg-white rounded-2xl p-8 border border-stone-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-500 cursor-pointer"
-                style={{ borderColor: 'transparent' }}
-                onMouseEnter={e => (e.currentTarget.style.borderColor = '#d97706')}
-                onMouseLeave={e => (e.currentTarget.style.borderColor = 'transparent')}>
+                className="group bg-white rounded-2xl p-8 border border-stone-200/70 hover:border-gold hover:shadow-xl hover:-translate-y-1 transition-all duration-500 cursor-pointer">
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-6" style={{ backgroundColor: 'rgba(217,119,6,0.1)' }}>
                   <s.icon size={22} style={{ color: '#d97706' }} />
                 </div>
@@ -286,9 +283,9 @@ function About() {
           </motion.div>
           <motion.div variants={fadeUp}>
             <span className="text-xs font-semibold tracking-[0.3em] uppercase" style={{ color: '#d97706' }}>Our Story</span>
-            <h2 className="font-display text-4xl font-bold mt-3 mb-6" style={{ color: '#1c1917' }}>Craftsmanship Brought to America</h2>
+            <h2 className="font-display text-4xl font-bold mt-3 mb-6" style={{ color: '#1c1917' }}>Built on Craftsmanship & Care</h2>
             <div className="space-y-4 text-sm leading-relaxed" style={{ color: '#44403c' }}>
-              <p>Ruach Renovations USA brings the same standard of excellence that has defined the Ruach name in Europe for over two decades. We believe your home should be more than a house — it should be a reflection of who you are.</p>
+              <p>Ruach Renovations brings over two decades of craftsmanship to every project. We believe your home should be more than a house — it should be a reflection of who you are.</p>
               <p>Our team of experienced tradespeople manages every aspect of your renovation under one roof. From the initial design consultation through to the final finishing touches, we take pride in delivering work that stands the test of time.</p>
               <p>Using only the highest quality materials and proven techniques, we transform kitchens, bathrooms, and entire homes — all while keeping you informed and involved every step of the way.</p>
             </div>
@@ -383,7 +380,7 @@ function Footer() {
         <span className="font-display text-lg font-bold" style={{ color: '#fafaf9' }}>
           Ruach <span style={{ color: '#d97706' }}>Renovations</span>
         </span>
-        <p className="text-xs" style={{ color: 'rgba(250,250,249,0.35)' }}>© 2026 Ruach Renovations USA. All rights reserved.</p>
+        <p className="text-xs" style={{ color: 'rgba(250,250,249,0.35)' }}>© 2026 Ruach Renovations. All rights reserved.</p>
         <div className="flex gap-6">
           {NAV.map(link => (
             <a key={link} href={`#${link.toLowerCase()}`} className="text-xs hover:text-white transition-colors" style={{ color: 'rgba(250,250,249,0.35)' }}>{link}</a>
@@ -398,8 +395,6 @@ function Footer() {
 export default function RuachPage() {
   return (
     <>
-      {/* Preview watermark — remove before final client delivery */}
-      <div className="preview-watermark">PREVIEW ONLY</div>
       <Nav />
       <Hero />
       <Services />

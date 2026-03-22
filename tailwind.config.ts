@@ -6,7 +6,6 @@ const config: Config = {
     extend: {
       colors: {
         charcoal: '#1c1917',
-        stone: '#44403c',
         cream: '#f5f0eb',
         warmwhite: '#fafaf9',
         gold: '#d97706',
