@@ -207,9 +207,12 @@ function Navigation() {
               <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-gold transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
+          <a href="tel:5550000000" className="flex items-center gap-2 text-warmwhite/60 hover:text-gold transition-colors text-sm font-body">
+            <Phone size={14} /> (555) 000-0000
+          </a>
           <a
             href="#contact"
-            className="shimmer-btn btn-gold ml-4 bg-gold text-charcoal px-6 py-2.5 rounded-full text-sm font-semibold font-body tracking-wide hover:bg-gold/90 transition-all duration-300"
+            className="shimmer-btn btn-gold ml-2 bg-gold text-charcoal px-6 py-2.5 rounded-full text-sm font-semibold font-body tracking-wide hover:bg-gold/90 transition-all duration-300"
           >
             Get a Free Quote
           </a>
@@ -278,6 +281,70 @@ function FloatingInput({
   );
 }
 
+/* ─── Trust Bar ─── */
+function TrustBar() {
+  const items = [
+    "20+ Years Experience",
+    "500+ Projects Completed",
+    "Licensed & Insured",
+    "Satisfaction Guaranteed",
+    "Serving Knoxville & East TN",
+  ];
+  return (
+    <div className="bg-gold text-charcoal py-2.5 overflow-hidden">
+      <div className="flex items-center gap-0 animate-none">
+        <div className="flex items-center gap-8 whitespace-nowrap w-full justify-center flex-wrap px-6">
+          {items.map((item, i) => (
+            <span key={item} className="flex items-center gap-3 text-xs font-body font-semibold tracking-wide uppercase">
+              {i > 0 && <span className="w-1 h-1 bg-charcoal/40 rounded-full hidden sm:block" />}
+              {item}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+/* ─── Sticky Mobile CTA ─── */
+function StickyMobileCTA() {
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const fn = () => setVisible(window.scrollY > 400);
+    window.addEventListener("scroll", fn);
+    return () => window.removeEventListener("scroll", fn);
+  }, []);
+  return (
+    <motion.div
+      initial={{ y: 100, opacity: 0 }}
+      animate={{ y: visible ? 0 : 100, opacity: visible ? 1 : 0 }}
+      transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+      className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-charcoal border-t border-gold/20 px-4 py-3 flex gap-3"
+    >
+      <a href="tel:5550000000" className="flex-1 flex items-center justify-center gap-2 border border-gold/30 text-gold rounded-xl py-3 text-sm font-semibold font-body">
+        <Phone size={16} /> Call Now
+      </a>
+      <a href="#contact" className="flex-1 flex items-center justify-center gap-2 bg-gold text-charcoal rounded-xl py-3 text-sm font-semibold font-body">
+        Free Quote
+      </a>
+    </motion.div>
+  );
+}
+
+/* ─── Mid-Page CTA Strip ─── */
+function CTAStrip({ text }: { text: string }) {
+  return (
+    <div className="bg-cream border-y border-gold/10 py-10">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
+        <p className="font-display text-charcoal text-xl md:text-2xl text-center sm:text-left">{text}</p>
+        <a href="#contact" className="flex-shrink-0 bg-gold text-charcoal px-8 py-3.5 rounded-full font-semibold font-body text-sm tracking-wide hover:bg-amber-600 transition-colors inline-flex items-center gap-2">
+          Request a Free Consultation <ArrowRight size={16} />
+        </a>
+      </div>
+    </div>
+  );
+}
+
 /* ─── Main Page ─── */
 export default function HomePage() {
   const { scrollYProgress } = useScroll();
@@ -285,6 +352,8 @@ export default function HomePage() {
 
   return (
     <main className="overflow-hidden">
+      <StickyMobileCTA />
+      <TrustBar />
       <Navigation />
 
       {/* ━━━ HERO ━━━ */}
@@ -306,10 +375,14 @@ export default function HomePage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="inline-block mb-8"
+            className="inline-flex flex-col sm:flex-row items-center gap-3 mb-8"
           >
             <span className="text-gold/70 text-sm tracking-[0.3em] uppercase font-body font-medium border border-gold/20 px-5 py-2 rounded-full">
-              Premium Home Renovations
+              Knoxville, Tennessee
+            </span>
+            <span className="hidden sm:block text-warmwhite/20 text-xs">·</span>
+            <span className="text-amber-400/80 text-sm font-body font-medium animate-pulse">
+              📅 Now Booking Spring Projects
             </span>
           </motion.div>
 
@@ -331,9 +404,7 @@ export default function HomePage() {
             transition={{ duration: 0.7, delay: 0.7 }}
             className="text-warmwhite/50 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-body leading-relaxed"
           >
-            For over two decades, we&apos;ve transformed houses into extraordinary
-            homes. Every renovation is a conversation between craft, vision, and
-            the way you want to live.
+            Knoxville&apos;s trusted kitchen, bathroom, and home renovation specialists. For over two decades, we&apos;ve transformed houses across East Tennessee into extraordinary homes.
           </motion.p>
 
           <motion.div
@@ -434,6 +505,8 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
+
+      <CTAStrip text="Ready to start your kitchen or bathroom transformation in Knoxville?" />
 
       {/* ━━━ WHY CHOOSE US ━━━ */}
       <section className="relative bg-charcoal py-28 lg:py-36 overflow-hidden">
@@ -628,6 +701,8 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
+
+      <CTAStrip text="Join hundreds of Knoxville homeowners who've transformed their homes with Ruach." />
 
       {/* ━━━ ABOUT ━━━ */}
       <section id="about" className="bg-cream py-28 lg:py-36">
