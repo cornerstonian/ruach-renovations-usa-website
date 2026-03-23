@@ -181,8 +181,8 @@ function Navigation() {
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
       className={`w-full transition-all duration-500 ${
         scrolled
-          ? "bg-charcoal/95 backdrop-blur-xl shadow-2xl shadow-charcoal/10 py-3"
-          : "bg-charcoal/90 backdrop-blur-md py-4"
+          ? "bg-charcoal/95 backdrop-blur-xl shadow-2xl shadow-charcoal/10 py-1"
+          : "bg-charcoal/90 backdrop-blur-md py-2"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
@@ -191,9 +191,9 @@ function Navigation() {
           <Image
             src="/logo.jpg"
             alt="Ruach Renovations"
-            width={140}
-            height={56}
-            className="object-contain h-14 w-auto"
+            width={200}
+            height={80}
+            className="object-contain h-20 w-auto"
             priority
           />
         </a>
