@@ -15,22 +15,22 @@ const jakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Ruach Renovations | Kitchen & Bathroom Remodeling — Knoxville, TN",
+  title: "Ruach Renovations | Kitchen & Bathroom Remodeling — Middle Tennessee",
   description:
     "Ruach Renovations — Knoxville's premier kitchen, bathroom, and full home renovation specialists. 20+ years of craftsmanship. Licensed, insured, satisfaction guaranteed. Request a free quote today.",
   keywords: [
-    "kitchen renovation Knoxville TN",
-    "bathroom remodel Knoxville",
-    "home renovation Knoxville Tennessee",
-    "kitchen remodeling East Tennessee",
-    "contractor Knoxville TN",
-    "flooring installation Knoxville",
+    "kitchen renovation Middle Tennessee",
+    "bathroom remodel Mt Juliet TN",
+    "home renovation Middle Tennessee",
+    "kitchen remodeling Mt Juliet Tennessee",
+    "contractor Middle Tennessee",
+    "home theater Mt Juliet TN",
     "Ruach Renovations",
   ],
   openGraph: {
-    title: "Ruach Renovations | Kitchen & Bathroom Remodeling — Knoxville, TN",
+    title: "Ruach Renovations | Kitchen & Bathroom Remodeling — Middle Tennessee",
     description:
-      "Breathing Life Into Your Home. Premium kitchen, bathroom, and full home renovations in Knoxville, TN. 20+ years of excellence.",
+      "Breathing Life Into Your Home. Premium kitchen, bathroom, and full home renovations in Middle Tennessee. 20+ years of excellence.",
     url: "https://ruach-renovations-usa.vercel.app",
     siteName: "Ruach Renovations",
     type: "website",
@@ -38,9 +38,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ruach Renovations | Kitchen & Bathroom Remodeling — Knoxville, TN",
+    title: "Ruach Renovations | Kitchen & Bathroom Remodeling — Middle Tennessee",
     description:
-      "Premium home renovation services in Knoxville, TN. Kitchens, bathrooms, full home renovations. 20+ years of excellence.",
+      "Premium home renovation services in Middle Tennessee. Kitchens, bathrooms, full home renovations. 20+ years of excellence.",
   },
   robots: {
     index: true,
@@ -66,13 +66,13 @@ export default function RootLayout({
               "@type": "HomeAndConstructionBusiness",
               name: "Ruach Renovations",
               description:
-                "Premium kitchen, bathroom, and full home renovation services in Knoxville, Tennessee.",
+                "Premium kitchen, bathroom, and full home renovation services in Mt. Juliet, Tennessee.",
               url: "https://ruach-renovations-usa.vercel.app",
-              telephone: "(555) 000-0000",
-              email: "eamon@ruachrenovations.com",
+              telephone: "(347) 479-8843",
+              email: "info@ruachrenovations.com",
               address: {
                 "@type": "PostalAddress",
-                addressLocality: "Knoxville",
+                addressLocality: "Mt. Juliet",
                 addressRegion: "TN",
                 addressCountry: "US",
               },

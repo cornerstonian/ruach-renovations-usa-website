@@ -49,53 +49,53 @@ const scaleIn = {
 const services = [
   {
     icon: ChefHat,
-    title: "Kitchen Renovation",
-    desc: "Transform your kitchen into the heart of your home with custom cabinetry, premium countertops, and thoughtful layouts designed for how you actually live.",
+    title: "Kitchen Renovation & Creation",
+    desc: "From complete gut renovations to brand-new kitchen builds, we craft the heart of your home with premium cabinetry, countertops, and layouts designed around how you actually live.",
   },
   {
     icon: Bath,
-    title: "Bathroom Remodel",
-    desc: "Spa-worthy retreats crafted with meticulous tile work, modern fixtures, and designs that balance luxury with everyday functionality.",
+    title: "Bathroom Renovation & Creation",
+    desc: "Spa-worthy retreats built to your vision — whether you're transforming an existing bathroom or creating one from scratch with luxury tile, fixtures, and expert craftsmanship.",
   },
   {
     icon: Home,
-    title: "Full Home Renovation",
-    desc: "Comprehensive whole-home transformations that reimagine your living space from foundation to finish, respecting your home's character.",
+    title: "Home Entertainment Theaters",
+    desc: "Transform any room into a cinematic experience. Custom home theaters designed and built with premium audio, lighting, and comfort — entertainment elevated to an art form.",
   },
   {
     icon: Layers,
-    title: "Flooring",
-    desc: "From hand-scraped hardwood to artisan tile, we source and install flooring that grounds every room with warmth and durability.",
+    title: "Interior Upscaling",
+    desc: "From flooring and built-ins to custom millwork and lighting design, we elevate every detail inside your home to match the life you've envisioned.",
   },
   {
     icon: Zap,
-    title: "Electrical",
-    desc: "Licensed electrical work including panel upgrades, smart home integration, and lighting design that sets the perfect mood.",
+    title: "Smart Home Integration",
+    desc: "Technological innovation built into your renovation — lighting control, automated systems, and smart home technology seamlessly integrated into your new space.",
   },
   {
     icon: Wrench,
-    title: "Plumbing",
-    desc: "Expert plumbing solutions from fixture installation to full re-piping, ensuring every system flows exactly as it should.",
+    title: "Full Home Renovation",
+    desc: "Comprehensive whole-home transformations managed under one team. From concept to completion, we handle every trade with the elegance and care your home deserves.",
   },
 ];
 
 const testimonials = [
   {
-    text: "Ruach transformed our 1960s kitchen into something out of Architectural Digest. Every detail was considered, every finish impeccable. They didn't just renovate — they elevated.",
-    name: "Sarah & David Chen",
-    location: "Knoxville, TN",
+    text: "Ruach transformed our kitchen into something out of a design magazine. Every detail was considered, every finish impeccable. They didn't just renovate — they elevated our entire home.",
+    name: "Marcus & Denise T.",
+    location: "Mt. Juliet, TN",
     stars: 5,
   },
   {
-    text: "After three disappointing contractors, Ruach was a revelation. On time, on budget, and the craftsmanship is extraordinary. Our bathroom is now the most beautiful room in the house.",
-    name: "Michael Torres",
+    text: "After talking to several contractors, Ruach was a revelation. On time, on budget, and the craftsmanship is extraordinary. Our bathroom is now the most beautiful room in the house.",
+    name: "James R.",
     location: "Nashville, TN",
     stars: 5,
   },
   {
-    text: "The attention to detail is what sets them apart. They noticed things we never would have — sight lines, light angles, material pairings. It's like having an architect and an artist.",
-    name: "Emily & James Wright",
-    location: "Chattanooga, TN",
+    text: "The attention to detail sets them apart. They noticed things we never would have — sight lines, light, material pairings. Christ-centered care shows in everything they do.",
+    name: "Patricia & William K.",
+    location: "Murfreesboro, TN",
     stars: 5,
   },
 ];
@@ -103,32 +103,32 @@ const testimonials = [
 const galleryItems = [
   {
     gradient: "from-stone/80 to-charcoal",
-    label: "Modern Kitchen Revival",
+    label: "Modern Kitchen Renovation",
     h: "h-[380px]",
   },
   {
     gradient: "from-gold/20 to-warmgray/40",
-    label: "Spa Bathroom Suite",
+    label: "Luxury Bathroom Suite",
     h: "h-[320px]",
   },
   {
     gradient: "from-charcoal to-stone/60",
-    label: "Open Concept Living",
+    label: "Home Entertainment Theater",
     h: "h-[440px]",
   },
   {
     gradient: "from-warmgray/30 to-cream",
-    label: "Heritage Home Restored",
+    label: "Custom Kitchen Creation",
     h: "h-[350px]",
   },
   {
     gradient: "from-stone/60 to-charcoal/80",
-    label: "Chef's Kitchen Design",
+    label: "Interior Upscaling",
     h: "h-[400px]",
   },
   {
     gradient: "from-gold/10 to-stone/30",
-    label: "Master Suite Transform",
+    label: "Master Bath Renovation",
     h: "h-[360px]",
   },
 ];
@@ -137,20 +137,20 @@ const whyData = [
   {
     num: "01",
     icon: Shield,
-    title: "Unmatched Craftsmanship",
-    text: "Every joint, every finish, every detail is executed to a standard most contractors don't even aim for. We build homes that age beautifully.",
+    title: "Hard Work & Real Craftsmanship",
+    text: "We are real people providing real work. No shortcuts, no substandard finishes — just hard work and craftsmanship executed to a standard most contractors don't even aim for.",
   },
   {
     num: "02",
-    icon: Clock,
-    title: "On Time. Every Time.",
-    text: "We plan meticulously and communicate relentlessly. Your project timeline isn't a suggestion — it's a commitment we take seriously.",
+    icon: Award,
+    title: "Elegance, Class & Innovation",
+    text: "We combine technological innovation with timeless design sensibility. Every renovation we deliver is elegant, thoughtful, and built to increase the value and beauty of your home.",
   },
   {
     num: "03",
-    icon: Award,
-    title: "Satisfaction Guaranteed",
-    text: "Our reputation is built on homeowners who can't stop showing off their renovations. If you're not thrilled, we're not finished.",
+    icon: Clock,
+    title: "Christ-Centered Care",
+    text: "Our work is guided by integrity, service, and genuine care for every homeowner we serve. We treat your home the way we'd want ours treated — with respect, diligence, and heart.",
   },
 ];
 
@@ -207,8 +207,8 @@ function Navigation() {
               <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-gold transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
-          <a href="tel:5550000000" className="flex items-center gap-2 text-warmwhite/60 hover:text-gold transition-colors text-sm font-body">
-            <Phone size={14} /> (555) 000-0000
+          <a href="tel:3474798843" className="flex items-center gap-2 text-warmwhite/60 hover:text-gold transition-colors text-sm font-body">
+            <Phone size={14} /> (347) 479-8843
           </a>
           <a
             href="#contact"
@@ -284,11 +284,11 @@ function FloatingInput({
 /* ─── Trust Bar ─── */
 function TrustBar() {
   const items = [
-    "20+ Years Experience",
+    "4 Years · Growing Strong",
     "500+ Projects Completed",
     "Licensed & Insured",
     "Satisfaction Guaranteed",
-    "Serving Knoxville & East TN",
+    "Serving Middle Tennessee",
   ];
   return (
     <div className="bg-gold text-charcoal py-2.5 overflow-hidden">
@@ -321,7 +321,7 @@ function StickyMobileCTA() {
       transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
       className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-charcoal border-t border-gold/20 px-4 py-3 flex gap-3"
     >
-      <a href="tel:5550000000" className="flex-1 flex items-center justify-center gap-2 border border-gold/30 text-gold rounded-xl py-3 text-sm font-semibold font-body">
+      <a href="tel:3474798843" className="flex-1 flex items-center justify-center gap-2 border border-gold/30 text-gold rounded-xl py-3 text-sm font-semibold font-body">
         <Phone size={16} /> Call Now
       </a>
       <a href="#contact" className="flex-1 flex items-center justify-center gap-2 bg-gold text-charcoal rounded-xl py-3 text-sm font-semibold font-body">
@@ -378,11 +378,11 @@ export default function HomePage() {
             className="inline-flex flex-col sm:flex-row items-center gap-3 mb-8"
           >
             <span className="text-gold/70 text-sm tracking-[0.3em] uppercase font-body font-medium border border-gold/20 px-5 py-2 rounded-full">
-              Knoxville, Tennessee
+              Middle Tennessee
             </span>
             <span className="hidden sm:block text-warmwhite/20 text-xs">·</span>
             <span className="text-amber-400/80 text-sm font-body font-medium animate-pulse">
-              📅 Now Booking Spring Projects
+              📅 Now Booking — Limited Spring Availability
             </span>
           </motion.div>
 
@@ -395,7 +395,7 @@ export default function HomePage() {
             Breathing{" "}
             <em className="text-gold not-italic font-display italic">Life</em>
             <br />
-            Into Your Home.
+            Into the Heart of Your Home.
           </motion.h1>
 
           <motion.p
@@ -404,7 +404,7 @@ export default function HomePage() {
             transition={{ duration: 0.7, delay: 0.7 }}
             className="text-warmwhite/50 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-body leading-relaxed"
           >
-            Knoxville&apos;s trusted kitchen, bathroom, and home renovation specialists. For over two decades, we&apos;ve transformed houses across East Tennessee into extraordinary homes.
+            Middle Tennessee&apos;s renovation specialists — bringing elegance, class, and Christ-centered care to every kitchen, bathroom, and home we transform.
           </motion.p>
 
           <motion.div
@@ -506,7 +506,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <CTAStrip text="Ready to start your kitchen or bathroom transformation in Knoxville?" />
+      <CTAStrip text="Ready to transform your kitchen, bathroom, or entire home in Middle Tennessee?" />
 
       {/* ━━━ WHY CHOOSE US ━━━ */}
       <section className="relative bg-charcoal py-28 lg:py-36 overflow-hidden">
@@ -702,7 +702,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <CTAStrip text="Join hundreds of Knoxville homeowners who've transformed their homes with Ruach." />
+      <CTAStrip text="Free consultations available — let's talk about your dream project." />
 
       {/* ━━━ ABOUT ━━━ */}
       <section id="about" className="bg-cream py-28 lg:py-36">
@@ -720,7 +720,7 @@ export default function HomePage() {
               {/* Stat badge */}
               <div className="absolute -bottom-6 -right-4 lg:-right-8 bg-gold text-charcoal rounded-2xl px-6 py-5 shadow-xl shadow-gold/20">
                 <span className="font-display text-4xl font-bold block leading-none">
-                  20+
+                  4
                 </span>
                 <span className="font-body text-xs tracking-wide uppercase mt-1 block text-charcoal/70">
                   Years of
@@ -741,22 +741,13 @@ export default function HomePage() {
                 Driven by Craft
               </h2>
               <p className="text-warmgray font-body leading-relaxed mb-6">
-                Ruach Renovations was founded on a simple belief: your home
-                should be a place that inspires you every single day. For over
-                twenty years, we&apos;ve brought that belief to life through
-                meticulous craftsmanship and genuine care for every homeowner we
-                serve.
+                Ruach Renovations was built on a simple conviction: your home should be a place that inspires you every single day. We are real people providing real work — guided by integrity, elegance, and genuine care for every homeowner we serve.
               </p>
               <p className="text-warmgray font-body leading-relaxed mb-6">
-                Our team combines old-world building techniques with modern
-                design sensibilities, creating spaces that feel both timeless and
-                thoroughly contemporary. We don&apos;t cut corners — we craft them.
+                We combine technological innovation with timeless craftsmanship, transforming kitchens, bathrooms, entertainment spaces, and entire homes across Middle Tennessee. Whether you&apos;re upscaling your current home or preparing it for sale, we bring the vision and the skill to make it happen.
               </p>
               <p className="text-warmgray font-body leading-relaxed mb-10">
-                From the initial consultation to the final walkthrough, you&apos;ll
-                work directly with our principal team. No handoffs, no
-                subcontracted surprises. Just honest work from people who take
-                immense pride in what they build.
+                From the initial free consultation to the final walkthrough, our team manages every detail. No handoffs, no surprises. Just hard work, elegant results, and the kind of care that comes from people who treat your home as if it were their own.
               </p>
               <a
                 href="#contact"
@@ -848,10 +839,10 @@ export default function HomePage() {
                   </span>
                 </div>
                 <a
-                  href="tel:5550000000"
+                  href="tel:3474798843"
                   className="text-warmwhite font-display text-2xl hover:text-gold transition-colors"
                 >
-                  (555) 000-0000
+                  (347) 479-8843
                 </a>
               </div>
 
@@ -865,10 +856,10 @@ export default function HomePage() {
                   </span>
                 </div>
                 <a
-                  href="mailto:eamon@ruachrenovations.com"
+                  href="mailto:info@ruachrenovations.com"
                   className="text-warmwhite font-display text-xl hover:text-gold transition-colors"
                 >
-                  eamon@ruachrenovations.com
+                  info@ruachrenovations.com
                 </a>
               </div>
 
@@ -882,8 +873,9 @@ export default function HomePage() {
                   </span>
                 </div>
                 <p className="text-warmwhite font-display text-xl">
-                  Knoxville, Tennessee
+                  Mt. Juliet, TN 37122
                 </p>
+                <p className="text-warmwhite/50 font-body text-sm mt-1">Serving all of Middle Tennessee</p>
               </div>
             </motion.div>
           </motion.div>
