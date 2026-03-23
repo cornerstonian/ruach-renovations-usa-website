@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import {
   ChefHat,
@@ -186,13 +187,15 @@ function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-full bg-gold/20 flex items-center justify-center group-hover:bg-gold/30 transition-colors duration-300">
-            <span className="font-display text-gold text-lg font-bold">R</span>
-          </div>
-          <span className="font-display text-warmwhite text-xl tracking-tight">
-            Ruach
-          </span>
+        <a href="#" className="flex items-center group">
+          <Image
+            src="/logo.jpg"
+            alt="Ruach Renovations"
+            width={140}
+            height={56}
+            className="object-contain h-14 w-auto"
+            priority
+          />
         </a>
 
         {/* Desktop Links */}
@@ -885,11 +888,12 @@ export default function HomePage() {
       {/* ━━━ FOOTER ━━━ */}
       <footer className="bg-charcoal border-t border-warmwhite/5 py-8">
         <div className="max-w-7xl mx-auto px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <Image src="/logo.jpg" alt="Ruach Renovations" width={100} height={40} className="object-contain h-10 w-auto opacity-80" />
           <p className="text-warmwhite/30 font-body text-sm">
             © {new Date().getFullYear()} Ruach Renovations. All rights reserved.
           </p>
           <p className="text-warmwhite/20 font-body text-xs">
-            Breathing Life Into Your Home.
+            Design · Build · Install
           </p>
         </div>
       </footer>
