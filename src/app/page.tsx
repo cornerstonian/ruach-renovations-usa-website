@@ -179,10 +179,10 @@ function Navigation() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+      className={`w-full transition-all duration-500 ${
         scrolled
-          ? "bg-charcoal/70 backdrop-blur-xl shadow-2xl shadow-charcoal/10 py-3"
-          : "bg-transparent py-6"
+          ? "bg-charcoal/95 backdrop-blur-xl shadow-2xl shadow-charcoal/10 py-3"
+          : "bg-charcoal/90 backdrop-blur-md py-4"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8 flex items-center justify-between">
@@ -356,11 +356,13 @@ export default function HomePage() {
   return (
     <main className="overflow-hidden">
       <StickyMobileCTA />
-      <TrustBar />
-      <Navigation />
+      <div className="sticky top-0 z-50">
+        <TrustBar />
+        <Navigation />
+      </div>
 
       {/* ━━━ HERO ━━━ */}
-      <section className="relative min-h-screen flex items-center justify-center bg-charcoal overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center bg-charcoal overflow-hidden" style={{ minHeight: 'calc(100vh - 96px)' }}>
         {/* Dot grid background */}
         <div className="absolute inset-0 dot-grid opacity-40" />
 
